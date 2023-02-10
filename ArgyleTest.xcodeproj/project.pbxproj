@@ -17,6 +17,11 @@
 		FBA2630C2996B87600CA367F /* ArgyleTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */; };
 		FBA2630E2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */; };
 		FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */; };
+		FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2631F2996C20F00CA367F /* APISessionProviding.swift */; };
+		FBA263222996C24B00CA367F /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263212996C24B00CA367F /* APISession.swift */; };
+		FBA263242996C29000CA367F /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263232996C29000CA367F /* RequestProviding.swift */; };
+		FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263252996C2C700CA367F /* HTTPMethod.swift */; };
+		FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263272996C3EA00CA367F /* HTTPHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FBA2631A2996BBF800CA367F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		FBA2631F2996C20F00CA367F /* APISessionProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionProviding.swift; sourceTree = "<group>"; };
+		FBA263212996C24B00CA367F /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		FBA263232996C29000CA367F /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
+		FBA263252996C2C700CA367F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FBA263272996C3EA00CA367F /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,7 @@
 		FBA262E92996B87400CA367F /* ArgyleTest */ = {
 			isa = PBXGroup;
 			children = (
+				FBA2631E2996C1FF00CA367F /* Networking */,
 				FBA2631B2996BCCA00CA367F /* Utilities */,
 				FBA262EA2996B87400CA367F /* AppDelegate.swift */,
 				FBA262EC2996B87400CA367F /* SceneDelegate.swift */,
@@ -138,6 +149,18 @@
 				FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FBA2631E2996C1FF00CA367F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2631F2996C20F00CA367F /* APISessionProviding.swift */,
+				FBA263212996C24B00CA367F /* APISession.swift */,
+				FBA263232996C29000CA367F /* RequestProviding.swift */,
+				FBA263252996C2C700CA367F /* HTTPMethod.swift */,
+				FBA263272996C3EA00CA367F /* HTTPHeader.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +294,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */,
+				FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */,
 				FBA262EF2996B87400CA367F /* ViewController.swift in Sources */,
 				FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */,
 				FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */,
+				FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */,
 				FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */,
+				FBA263222996C24B00CA367F /* APISession.swift in Sources */,
+				FBA263242996C29000CA367F /* RequestProviding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
