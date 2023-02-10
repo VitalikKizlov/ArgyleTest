@@ -16,6 +16,7 @@
 		FBA263022996B87600CA367F /* ArgyleTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263012996B87600CA367F /* ArgyleTestTests.swift */; };
 		FBA2630C2996B87600CA367F /* ArgyleTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */; };
 		FBA2630E2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */; };
+		FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		FBA263072996B87600CA367F /* ArgyleTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgyleTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestUITests.swift; sourceTree = "<group>"; };
 		FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FBA2631A2996BBF800CA367F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		FBA262E92996B87400CA367F /* ArgyleTest */ = {
 			isa = PBXGroup;
 			children = (
+				FBA2631B2996BCCA00CA367F /* Utilities */,
 				FBA262EA2996B87400CA367F /* AppDelegate.swift */,
 				FBA262EC2996B87400CA367F /* SceneDelegate.swift */,
 				FBA262EE2996B87400CA367F /* ViewController.swift */,
@@ -106,6 +110,7 @@
 				FBA262F32996B87600CA367F /* Assets.xcassets */,
 				FBA262F52996B87600CA367F /* LaunchScreen.storyboard */,
 				FBA262F82996B87600CA367F /* Info.plist */,
+				FBA2631A2996BBF800CA367F /* Config.xcconfig */,
 			);
 			path = ArgyleTest;
 			sourceTree = "<group>";
@@ -125,6 +130,14 @@
 				FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */,
 			);
 			path = ArgyleTestUITests;
+			sourceTree = "<group>";
+		};
+		FBA2631B2996BCCA00CA367F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 				FBA262EF2996B87400CA367F /* ViewController.swift in Sources */,
 				FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */,
 				FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */,
+				FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +332,7 @@
 /* Begin XCBuildConfiguration section */
 		FBA2630F2996B87600CA367F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA2631A2996BBF800CA367F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +393,7 @@
 		};
 		FBA263102996B87600CA367F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA2631A2996BBF800CA367F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
