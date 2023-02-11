@@ -12,7 +12,7 @@ enum SearchEnpoint: RequestProviding {
     case linkItems(SearchParameters)
 
     var path: String {
-        return "/search/link-items"
+        return "/v1/search/link-items"
     }
 
     var method: HTTPMethod {
