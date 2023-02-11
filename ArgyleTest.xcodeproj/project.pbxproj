@@ -22,6 +22,8 @@
 		FBA263242996C29000CA367F /* RequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263232996C29000CA367F /* RequestProviding.swift */; };
 		FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263252996C2C700CA367F /* HTTPMethod.swift */; };
 		FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263272996C3EA00CA367F /* HTTPHeader.swift */; };
+		FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2632A299791EE00CA367F /* Dictionary.swift */; };
+		FBA2632D2997926500CA367F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2632C2997926500CA367F /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		FBA263232996C29000CA367F /* RequestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviding.swift; sourceTree = "<group>"; };
 		FBA263252996C2C700CA367F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		FBA263272996C3EA00CA367F /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		FBA2632A299791EE00CA367F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		FBA2632C2997926500CA367F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		FBA262E92996B87400CA367F /* ArgyleTest */ = {
 			isa = PBXGroup;
 			children = (
+				FBA26329299791E600CA367F /* Extensions */,
 				FBA2631E2996C1FF00CA367F /* Networking */,
 				FBA2631B2996BCCA00CA367F /* Utilities */,
 				FBA262EA2996B87400CA367F /* AppDelegate.swift */,
@@ -159,8 +164,17 @@
 				FBA263232996C29000CA367F /* RequestProviding.swift */,
 				FBA263252996C2C700CA367F /* HTTPMethod.swift */,
 				FBA263272996C3EA00CA367F /* HTTPHeader.swift */,
+				FBA2632C2997926500CA367F /* API.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		FBA26329299791E600CA367F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2632A299791EE00CA367F /* Dictionary.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA2632D2997926500CA367F /* API.swift in Sources */,
 				FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */,
+				FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */,
 				FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */,
 				FBA262EF2996B87400CA367F /* ViewController.swift in Sources */,
 				FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */,

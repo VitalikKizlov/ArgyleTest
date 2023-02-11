@@ -12,7 +12,6 @@ protocol RequestProviding {
     var method: HTTPMethod { get }
     var parameters: [String: Any] { get }
     var headerFields: [String: String] { get }
-    var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy { get }
 
     func urlRequest() -> URLRequest
 }
@@ -20,10 +19,13 @@ protocol RequestProviding {
 extension RequestProviding {
 
     func authorizationHeader() -> [String: String] {
-        guard let bearer = FirebaseManager.shared.accessToken else {
-            return [:]
-        }
-        return [HTTPHeader.Key.authorization: HTTPHeader.Value.bearer(bearer)]
+        let loginString = "\(API.username):\(API.password)"
+
+        guard let loginData = loginString.data(using: String.Encoding.utf8)
+        else { return [:] }
+        let base64LoginString = loginData.base64EncodedString()
+
+        return [HTTPHeader.authorization: "Basic \(base64LoginString)"]
     }
 
     func urlRequest() -> URLRequest {
@@ -51,5 +53,4 @@ extension RequestProviding {
         print("Request ----", request)
         return request
     }
-
 }

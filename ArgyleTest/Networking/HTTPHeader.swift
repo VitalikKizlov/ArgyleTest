@@ -8,5 +8,5 @@
 import Foundation
 
 struct HTTPHeader {
-    public static let authorization = "Authorization"
+    static let authorization = "Authorization"
 }

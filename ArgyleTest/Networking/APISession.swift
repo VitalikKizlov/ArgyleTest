@@ -15,8 +15,6 @@ struct ApiSession: APISessionProviding {
     private let decoder = JSONDecoder()
 
     func execute<T>(_ requestProvider: RequestProviding) -> AnyPublisher<T, Error> where T : Codable {
-
-        decoder.dateDecodingStrategy = requestProvider.dateDecodingStrategy
         return URLSession.shared.dataTaskPublisher(for: requestProvider.urlRequest())
             .tryMap { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse,
