@@ -16,6 +16,17 @@ class SearchViewController: UIViewController {
         case main
     }
 
+    @AutoLayoutable private var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Search"
+        searchBar.barTintColor = .red
+        searchBar.backgroundColor = .gray
+        searchBar.searchBarStyle = .minimal
+        searchBar.returnKeyType = .search
+        searchBar.sizeToFit()
+        return searchBar
+    }()
+
     @AutoLayoutable private var collectionView = SearchCollectionView()
 
     typealias DataSource = UICollectionViewDiffableDataSource<Section, SearchItemViewModel>
@@ -41,7 +52,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBindings()
-        configureCollectionView()
+        configureUI()
     }
 
     private func setUpBindings() {
@@ -65,14 +76,31 @@ class SearchViewController: UIViewController {
             .store(in: &subscriptions)
     }
 
+    private func configureUI() {
+        configureSearchBar()
+        configureCollectionView()
+    }
+
+    private func configureSearchBar() {
+        view.addSubview(searchBar)
+
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            searchBar.heightAnchor.constraint(equalToConstant: 56)
+        ])
+    }
+
     private func configureCollectionView() {
         view.addSubview(collectionView)
 
-        let constraints = collectionView.constraintsForAnchoringTo(boundsOf: view)
-        NSLayoutConstraint.activate(constraints)
-
-//        collectionView.contentInset = collectionViewContentInsets
-//        collectionView.scrollIndicatorInsets = collectionViewContentInsets
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 
     private func setupDataSource() -> DataSource {
