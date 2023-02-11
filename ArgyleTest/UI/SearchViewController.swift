@@ -20,7 +20,6 @@ class SearchViewController: UIViewController {
     @AutoLayoutable private var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
-        searchBar.barTintColor = .red
         searchBar.backgroundColor = .gray
         searchBar.searchBarStyle = .minimal
         searchBar.returnKeyType = .search
@@ -90,14 +89,16 @@ class SearchViewController: UIViewController {
 
         searchBar
             .searchButtonClickedPublisher
-            .sink { _ in
+            .sink { [weak self] _ in
+                guard let self = self else { return }
                 self.clearSearchBarState()
             }
             .store(in: &subscriptions)
 
         searchBar
             .cancelButtonClickedPublisher
-            .sink { _ in
+            .sink { [weak self] _ in
+                guard let self = self else { return }
                 self.viewModel.viewInputEventSubject.send(.cancelButtonClicked)
                 self.clearSearchBarState()
             }
