@@ -16,18 +16,26 @@ final class SearchViewModel {
 
     // MARK: - Input
 
-    @Published var searchText = "amaz"
+    @Published var searchText = ""
 
     // MARK: - Properties
 
     @Published private(set) var state: LoadingState = .idle
     private var subscriptions: Set<AnyCancellable> = []
 
-    init() {
-        search()
-    }
-
     // MARK: - Private
+
+    private func setupBindings() {
+        $searchText
+            .debounce(for: 0.2, scheduler: DispatchQueue.main)
+            .removeDuplicates()
+            .filter { !$0.isEmpty }
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                self.search()
+            }
+            .store(in: &subscriptions)
+    }
 
     private func search() {
         let parameters = SearchParameters(limit: 15, query: searchText)

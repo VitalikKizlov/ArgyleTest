@@ -32,6 +32,12 @@
 		FBA263422997995900CA367F /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263412997995900CA367F /* InjectedValues.swift */; };
 		FBA263442997997600CA367F /* InjectedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263432997997600CA367F /* InjectedKeys.swift */; };
 		FBA2634729979A3100CA367F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634629979A3100CA367F /* SearchViewModel.swift */; };
+		FBA263492997A35A00CA367F /* SearchCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263482997A35A00CA367F /* SearchCollectionView.swift */; };
+		FBA2634B2997A39C00CA367F /* AutoLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634A2997A39C00CA367F /* AutoLayoutable.swift */; };
+		FBA2634E2997A44C00CA367F /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634D2997A44C00CA367F /* SearchCollectionViewCell.swift */; };
+		FBA263502997A48F00CA367F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634F2997A48F00CA367F /* UIView.swift */; };
+		FBA263522997A4F500CA367F /* SearchCollectionViewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */; };
+		FBA263542997A54000CA367F /* SearchCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		FBA263412997995900CA367F /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		FBA263432997997600CA367F /* InjectedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedKeys.swift; sourceTree = "<group>"; };
 		FBA2634629979A3100CA367F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FBA263482997A35A00CA367F /* SearchCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionView.swift; sourceTree = "<group>"; };
+		FBA2634A2997A39C00CA367F /* AutoLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutable.swift; sourceTree = "<group>"; };
+		FBA2634D2997A44C00CA367F /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBA2634F2997A48F00CA367F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellView.swift; sourceTree = "<group>"; };
+		FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */,
+				FBA2634A2997A39C00CA367F /* AutoLayoutable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA2632A299791EE00CA367F /* Dictionary.swift */,
+				FBA2634F2997A48F00CA367F /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,10 +257,22 @@
 		FBA26345299799D900CA367F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FBA2634C2997A42B00CA367F /* SearchCollectionViewCell */,
 				FBA262EE2996B87400CA367F /* SearchViewController.swift */,
 				FBA2634629979A3100CA367F /* SearchViewModel.swift */,
+				FBA263482997A35A00CA367F /* SearchCollectionView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		FBA2634C2997A42B00CA367F /* SearchCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2634D2997A44C00CA367F /* SearchCollectionViewCell.swift */,
+				FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */,
+				FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */,
+			);
+			path = SearchCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,25 +405,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA2632D2997926500CA367F /* API.swift in Sources */,
+				FBA263522997A4F500CA367F /* SearchCollectionViewCellView.swift in Sources */,
 				FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */,
 				FBA26331299792D200CA367F /* SearchEndpoint.swift in Sources */,
 				FBA2633E2997991F00CA367F /* Injected.swift in Sources */,
 				FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */,
 				FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */,
 				FBA263422997995900CA367F /* InjectedValues.swift in Sources */,
+				FBA2634B2997A39C00CA367F /* AutoLayoutable.swift in Sources */,
 				FBA263442997997600CA367F /* InjectedKeys.swift in Sources */,
 				FBA262EF2996B87400CA367F /* SearchViewController.swift in Sources */,
 				FBA263402997993300CA367F /* InjectionKey.swift in Sources */,
+				FBA263492997A35A00CA367F /* SearchCollectionView.swift in Sources */,
 				FBA2633B299796A600CA367F /* SearchResults.swift in Sources */,
 				FBA263362997949100CA367F /* SearchProvider.swift in Sources */,
+				FBA2634E2997A44C00CA367F /* SearchCollectionViewCell.swift in Sources */,
 				FBA26333299793BF00CA367F /* SearchParameters.swift in Sources */,
 				FBA26339299795FD00CA367F /* Company.swift in Sources */,
 				FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */,
 				FBA2634729979A3100CA367F /* SearchViewModel.swift in Sources */,
 				FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */,
+				FBA263502997A48F00CA367F /* UIView.swift in Sources */,
 				FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */,
 				FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */,
 				FBA263222996C24B00CA367F /* APISession.swift in Sources */,
+				FBA263542997A54000CA367F /* SearchCollectionViewCellViewModel.swift in Sources */,
 				FBA263242996C29000CA367F /* RequestProviding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
