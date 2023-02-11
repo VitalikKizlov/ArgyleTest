@@ -16,7 +16,7 @@ final class SearchViewModel {
 
     // MARK: - Input
 
-    @Published private var searchText = ""
+    @Published private(set) var searchText = ""
     let viewInputEventSubject = PassthroughSubject<ViewInputEvent, Never>()
     private lazy var viewInputEventPublisher = viewInputEventSubject.eraseToAnyPublisher()
 

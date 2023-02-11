@@ -45,6 +45,7 @@
 		FBA263632998398200CA367F /* SearchProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263622998398200CA367F /* SearchProviderTests.swift */; };
 		FBA2636729983C9700CA367F /* MockSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636429983BBD00CA367F /* MockSearchProvider.swift */; };
 		FBA2636929983DF300CA367F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636829983DF300CA367F /* ProcessInfo.swift */; };
+		FBA2636B2998461A00CA367F /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		FBA263622998398200CA367F /* SearchProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProviderTests.swift; sourceTree = "<group>"; };
 		FBA2636429983BBD00CA367F /* MockSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchProvider.swift; sourceTree = "<group>"; };
 		FBA2636829983DF300CA367F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
+		FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */,
 				FBA263622998398200CA367F /* SearchProviderTests.swift */,
+				FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */,
 			);
 			path = ArgyleTestTests;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			files = (
 				FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */,
 				FBA263632998398200CA367F /* SearchProviderTests.swift in Sources */,
+				FBA2636B2998461A00CA367F /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

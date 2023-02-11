@@ -32,10 +32,10 @@ class SearchProviderTests: XCTestCase {
         searchProvider
             .searchLinkItems(SearchParameters(limit: 15, query: "q"))
             .sink(receiveCompletion: { _ in }) { response in
-            XCTAssertEqual(response, expectedResponse)
-            expectation.fulfill()
-        }
-        .store(in: &subscriptions)
+                XCTAssertEqual(response, expectedResponse)
+                expectation.fulfill()
+            }
+            .store(in: &subscriptions)
 
         wait(for: [expectation], timeout: 1)
     }
