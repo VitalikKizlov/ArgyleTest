@@ -13,14 +13,14 @@ class SearchViewController: UIViewController {
 
     private let viewModel: SearchViewModel
 
-    enum Section: Int, Hashable {
+    enum Section: Int {
         case main
     }
 
     @AutoLayoutable private var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
-        searchBar.backgroundColor = .gray
+        searchBar.backgroundColor = .white
         searchBar.searchBarStyle = .minimal
         searchBar.returnKeyType = .search
         searchBar.sizeToFit()
