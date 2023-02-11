@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import CombineCocoa
 
 class SearchViewController: UIViewController {
 
@@ -74,6 +75,28 @@ class SearchViewController: UIViewController {
                 }
             }
             .store(in: &subscriptions)
+
+        searchBar
+            .textDidChangePublisher
+            .sink { [weak self] text in
+                guard let self = self else { return }
+                self.viewModel.searchText = text
+            }
+            .store(in: &subscriptions)
+
+        searchBar
+            .searchButtonClickedPublisher
+            .sink { _ in
+                self.viewModel.viewInputEventSubject.send(.searchButtonClicked)
+            }
+            .store(in: &subscriptions)
+
+        searchBar
+            .cancelButtonClickedPublisher
+            .sink { _ in
+                self.viewModel.viewInputEventSubject.send(.cancelButtonClicked)
+            }
+            .store(in: &subscriptions)
     }
 
     private func configureUI() {
@@ -111,7 +134,6 @@ class SearchViewController: UIViewController {
             else { return nil }
 
             cell.setup(item)
-
             return cell
         }
 

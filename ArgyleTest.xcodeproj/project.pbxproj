@@ -38,6 +38,8 @@
 		FBA263502997A48F00CA367F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634F2997A48F00CA367F /* UIView.swift */; };
 		FBA263522997A4F500CA367F /* SearchCollectionViewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */; };
 		FBA263542997A54000CA367F /* SearchCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */; };
+		FBA263572997B35D00CA367F /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FBA263562997B35D00CA367F /* CombineCocoa */; };
+		FBA2635A2997B38200CA367F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA263592997B38200CA367F /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA2635A2997B38200CA367F /* Kingfisher in Frameworks */,
+				FBA263572997B35D00CA367F /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +295,10 @@
 			dependencies = (
 			);
 			name = ArgyleTest;
+			packageProductDependencies = (
+				FBA263562997B35D00CA367F /* CombineCocoa */,
+				FBA263592997B38200CA367F /* Kingfisher */,
+			);
 			productName = ArgyleTest;
 			productReference = FBA262E72996B87400CA367F /* ArgyleTest.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +371,10 @@
 				Base,
 			);
 			mainGroup = FBA262DE2996B87400CA367F;
+			packageReferences = (
+				FBA263552997B35D00CA367F /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				FBA263582997B38200CA367F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FBA262E82996B87400CA367F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -755,6 +767,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBA263552997B35D00CA367F /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		FBA263582997B38200CA367F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBA263562997B35D00CA367F /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA263552997B35D00CA367F /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		FBA263592997B38200CA367F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA263582997B38200CA367F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBA262DF2996B87400CA367F /* Project object */;
 }

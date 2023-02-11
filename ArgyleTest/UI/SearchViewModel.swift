@@ -17,6 +17,8 @@ final class SearchViewModel {
     // MARK: - Input
 
     @Published var searchText = ""
+    let viewInputEventSubject = PassthroughSubject<ViewInputEvent, Never>()
+    private lazy var viewInputEventPublisher = viewInputEventSubject.eraseToAnyPublisher()
 
     // MARK: - Properties
 
@@ -41,6 +43,22 @@ final class SearchViewModel {
                 self.search()
             }
             .store(in: &subscriptions)
+
+        viewInputEventPublisher
+            .sink { [weak self] viewInputEvent in
+                guard let self = self else { return }
+                self.proceedViewInputEvent(viewInputEvent)
+            }
+            .store(in: &subscriptions)
+    }
+
+    private func proceedViewInputEvent(_ event: ViewInputEvent) {
+        switch event {
+        case .cancelButtonClicked:
+            print("cancelButtonClicked")
+        case .searchButtonClicked:
+            print("searchButtonClicked")
+        }
     }
 
     private func search() {
@@ -73,5 +91,12 @@ extension SearchViewModel {
         case loading
         case loaded([SearchItemViewModel])
         case failed(Error)
+    }
+}
+
+extension SearchViewModel {
+    enum ViewInputEvent {
+        case searchButtonClicked
+        case cancelButtonClicked
     }
 }
