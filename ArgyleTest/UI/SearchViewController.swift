@@ -71,6 +71,9 @@ class SearchViewController: UIViewController {
                 case .loading:
                     print("show spinner")
                 case .loaded(let viewModels):
+                    if viewModels.isEmpty {
+                        print("emptyyyy")
+                    }
                     self.updateSections(viewModels)
                 }
             }
@@ -80,14 +83,15 @@ class SearchViewController: UIViewController {
             .textDidChangePublisher
             .sink { [weak self] text in
                 guard let self = self else { return }
-                self.viewModel.searchText = text
+                self.viewModel.viewInputEventSubject.send(.textDidChange(text))
+                self.searchBar.setShowsCancelButton(true, animated: true)
             }
             .store(in: &subscriptions)
 
         searchBar
             .searchButtonClickedPublisher
             .sink { _ in
-                self.viewModel.viewInputEventSubject.send(.searchButtonClicked)
+                self.clearSearchBarState()
             }
             .store(in: &subscriptions)
 
@@ -95,6 +99,7 @@ class SearchViewController: UIViewController {
             .cancelButtonClickedPublisher
             .sink { _ in
                 self.viewModel.viewInputEventSubject.send(.cancelButtonClicked)
+                self.clearSearchBarState()
             }
             .store(in: &subscriptions)
     }
@@ -145,6 +150,12 @@ class SearchViewController: UIViewController {
         snapshot.appendSections([Section.main])
         snapshot.appendItems(viewModels, toSection: .main)
         dataSource.apply(snapshot, animatingDifferences: true)
+    }
+
+    private func clearSearchBarState() {
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
     }
 }
 

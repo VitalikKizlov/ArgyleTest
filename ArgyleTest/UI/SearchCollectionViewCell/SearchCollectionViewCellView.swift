@@ -82,4 +82,10 @@ final class SearchCollectionViewCellView: UIView {
             ]
         )
     }
+
+    func prepareForReuse() {
+        titleLabel.text = ""
+        subTitleLabel.text = ""
+        companyLogo.image = nil
+    }
 }

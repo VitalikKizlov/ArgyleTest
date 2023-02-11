@@ -16,7 +16,7 @@ final class SearchViewModel {
 
     // MARK: - Input
 
-    @Published var searchText = ""
+    @Published private var searchText = ""
     let viewInputEventSubject = PassthroughSubject<ViewInputEvent, Never>()
     private lazy var viewInputEventPublisher = viewInputEventSubject.eraseToAnyPublisher()
 
@@ -37,7 +37,13 @@ final class SearchViewModel {
         $searchText
             .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .removeDuplicates()
-            .filter { !$0.isEmpty }
+            .filter { value in
+                if value.isEmpty {
+                    self.state = .loaded([])
+                }
+
+                return value.count > 1
+            }
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 self.search()
@@ -54,14 +60,16 @@ final class SearchViewModel {
 
     private func proceedViewInputEvent(_ event: ViewInputEvent) {
         switch event {
+        case .textDidChange(let text):
+            searchText = text
         case .cancelButtonClicked:
-            print("cancelButtonClicked")
-        case .searchButtonClicked:
-            print("searchButtonClicked")
+            state = .loaded([])
         }
     }
 
     private func search() {
+        state = .loading
+
         let parameters = SearchParameters(limit: 15, query: searchText)
         searchProvider.searchLinkItems(parameters)
             .sink { completion in
@@ -96,7 +104,7 @@ extension SearchViewModel {
 
 extension SearchViewModel {
     enum ViewInputEvent {
-        case searchButtonClicked
+        case textDidChange(String)
         case cancelButtonClicked
     }
 }

@@ -26,6 +26,11 @@ final class SearchCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        searchCollectionViewCellView.prepareForReuse()
+    }
+
     // MARK: - Setup
 
     func setup(_ viewModel: SearchItemViewModel) {
