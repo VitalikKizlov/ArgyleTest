@@ -8,5 +8,5 @@
 import Foundation
 
 struct SearchProviderKey: InjectionKey {
-    static var currentValue: SearchProviding = SearchProvider()
+    static var currentValue: SearchProviding = ProcessInfo.isRunningUnitTests ? MockSearchProvider() : SearchProvider()
 }

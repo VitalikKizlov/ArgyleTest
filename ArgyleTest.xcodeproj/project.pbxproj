@@ -11,7 +11,6 @@
 		FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EC2996B87400CA367F /* SceneDelegate.swift */; };
 		FBA262EF2996B87400CA367F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EE2996B87400CA367F /* SearchViewController.swift */; };
 		FBA262F42996B87600CA367F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA262F32996B87600CA367F /* Assets.xcassets */; };
-		FBA263022996B87600CA367F /* ArgyleTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263012996B87600CA367F /* ArgyleTestTests.swift */; };
 		FBA2630C2996B87600CA367F /* ArgyleTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */; };
 		FBA2630E2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */; };
 		FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2631C2996BCD700CA367F /* BuildConfiguration.swift */; };
@@ -43,6 +42,9 @@
 		FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */; };
 		FBA2635F2998367500CA367F /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FBA2635E2998367500CA367F /* CombineCocoa */; };
 		FBA263612998367500CA367F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA263602998367500CA367F /* Kingfisher */; };
+		FBA263632998398200CA367F /* APISessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263622998398200CA367F /* APISessionTests.swift */; };
+		FBA2636729983C9700CA367F /* MockSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636429983BBD00CA367F /* MockSearchProvider.swift */; };
+		FBA2636929983DF300CA367F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636829983DF300CA367F /* ProcessInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,6 @@
 		FBA262F32996B87600CA367F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBA262F82996B87600CA367F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA262FD2996B87600CA367F /* ArgyleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgyleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBA263012996B87600CA367F /* ArgyleTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestTests.swift; sourceTree = "<group>"; };
 		FBA263072996B87600CA367F /* ArgyleTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgyleTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestUITests.swift; sourceTree = "<group>"; };
 		FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -100,6 +101,9 @@
 		FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellView.swift; sourceTree = "<group>"; };
 		FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		FBA263622998398200CA367F /* APISessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionTests.swift; sourceTree = "<group>"; };
+		FBA2636429983BBD00CA367F /* MockSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchProvider.swift; sourceTree = "<group>"; };
+		FBA2636829983DF300CA367F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		FBA262E92996B87400CA367F /* ArgyleTest */ = {
 			isa = PBXGroup;
 			children = (
+				FBA2636629983C7C00CA367F /* Mocks */,
 				FBA2633C2997990E00CA367F /* Injection */,
 				FBA26337299795F300CA367F /* Models */,
 				FBA26329299791E600CA367F /* Extensions */,
@@ -173,8 +178,8 @@
 		FBA263002996B87600CA367F /* ArgyleTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				FBA263012996B87600CA367F /* ArgyleTestTests.swift */,
 				FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */,
+				FBA263622998398200CA367F /* APISessionTests.swift */,
 			);
 			path = ArgyleTestTests;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			children = (
 				FBA2632A299791EE00CA367F /* Dictionary.swift */,
 				FBA2634F2997A48F00CA367F /* UIView.swift */,
+				FBA2636829983DF300CA367F /* ProcessInfo.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +298,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBA2636629983C7C00CA367F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2636429983BBD00CA367F /* MockSearchProvider.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +464,7 @@
 				FBA263492997A35A00CA367F /* SearchCollectionView.swift in Sources */,
 				FBA2633B299796A600CA367F /* SearchResults.swift in Sources */,
 				FBA263362997949100CA367F /* SearchProvider.swift in Sources */,
+				FBA2636929983DF300CA367F /* ProcessInfo.swift in Sources */,
 				FBA2634E2997A44C00CA367F /* SearchCollectionViewCell.swift in Sources */,
 				FBA26333299793BF00CA367F /* SearchParameters.swift in Sources */,
 				FBA26339299795FD00CA367F /* Company.swift in Sources */,
@@ -458,6 +473,7 @@
 				FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */,
 				FBA263502997A48F00CA367F /* UIView.swift in Sources */,
 				FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */,
+				FBA2636729983C9700CA367F /* MockSearchProvider.swift in Sources */,
 				FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */,
 				FBA263222996C24B00CA367F /* APISession.swift in Sources */,
 				FBA263542997A54000CA367F /* SearchCollectionViewCellViewModel.swift in Sources */,
@@ -470,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */,
-				FBA263022996B87600CA367F /* ArgyleTestTests.swift in Sources */,
+				FBA263632998398200CA367F /* APISessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,3 +14,9 @@ struct SearchResults: Codable {
         case companies = "results"
     }
 }
+
+extension SearchResults: Equatable {
+    static func == (lhs: SearchResults, rhs: SearchResults) -> Bool {
+        lhs.companies == rhs.companies
+    }
+}

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 struct ApiSession: APISessionProviding {
-    private let apiSessionQueue = DispatchQueue(label: "com.quartr.API",
+    private let apiSessionQueue = DispatchQueue(label: "com.API",
                                                 qos: .default)
 
     private let decoder = JSONDecoder()
@@ -27,13 +27,5 @@ struct ApiSession: APISessionProviding {
             .decode(type: T.self, decoder: decoder)
             .eraseToAnyPublisher()
 
-    }
-}
-
-extension Publisher {
-    func result(_ receiveResult: @escaping (Result<Output, Failure>) -> Void) -> AnyCancellable {
-        map(Result.success)
-        .catch { Just(.failure($0)) }
-        .sink(receiveValue: receiveResult)
     }
 }

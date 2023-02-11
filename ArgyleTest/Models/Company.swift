@@ -28,3 +28,5 @@ enum Kind: String, Codable {
     case gig = "gig"
     case platform = "platform"
 }
+
+extension Company: Equatable {}
