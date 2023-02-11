@@ -42,7 +42,7 @@
 		FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */; };
 		FBA2635F2998367500CA367F /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FBA2635E2998367500CA367F /* CombineCocoa */; };
 		FBA263612998367500CA367F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA263602998367500CA367F /* Kingfisher */; };
-		FBA263632998398200CA367F /* APISessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263622998398200CA367F /* APISessionTests.swift */; };
+		FBA263632998398200CA367F /* SearchProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263622998398200CA367F /* SearchProviderTests.swift */; };
 		FBA2636729983C9700CA367F /* MockSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636429983BBD00CA367F /* MockSearchProvider.swift */; };
 		FBA2636929983DF300CA367F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636829983DF300CA367F /* ProcessInfo.swift */; };
 /* End PBXBuildFile section */
@@ -101,7 +101,7 @@
 		FBA263512997A4F500CA367F /* SearchCollectionViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellView.swift; sourceTree = "<group>"; };
 		FBA263532997A54000CA367F /* SearchCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
-		FBA263622998398200CA367F /* APISessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionTests.swift; sourceTree = "<group>"; };
+		FBA263622998398200CA367F /* SearchProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProviderTests.swift; sourceTree = "<group>"; };
 		FBA2636429983BBD00CA367F /* MockSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchProvider.swift; sourceTree = "<group>"; };
 		FBA2636829983DF300CA367F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */,
-				FBA263622998398200CA367F /* APISessionTests.swift */,
+				FBA263622998398200CA367F /* SearchProviderTests.swift */,
 			);
 			path = ArgyleTestTests;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */,
-				FBA263632998398200CA367F /* APISessionTests.swift in Sources */,
+				FBA263632998398200CA367F /* SearchProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

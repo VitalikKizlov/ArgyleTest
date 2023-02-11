@@ -9,7 +9,7 @@ import XCTest
 @testable import ArgyleTest
 import Combine
 
-class APISessionTests: XCTestCase {
+class SearchProviderTests: XCTestCase {
 
     @Injected(\.searchProvider) private var searchProvider: SearchProviding
     private var subscriptions: Set<AnyCancellable> = []

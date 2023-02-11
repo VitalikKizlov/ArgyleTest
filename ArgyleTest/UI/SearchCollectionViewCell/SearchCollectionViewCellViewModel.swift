@@ -13,7 +13,7 @@ struct SearchItemViewModel {
     let imageUrl: URL?
 }
 
-extension SearchItemViewModel: Hashable {
+extension SearchItemViewModel: Hashable, Equatable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(subtitle)

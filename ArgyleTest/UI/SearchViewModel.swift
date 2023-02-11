@@ -94,11 +94,26 @@ final class SearchViewModel {
 }
 
 extension SearchViewModel {
-    enum LoadingState {
+    enum LoadingState: Equatable {
         case idle
         case loading
         case loaded([SearchItemViewModel])
         case failed(Error)
+
+        static func == (lhs: SearchViewModel.LoadingState, rhs: SearchViewModel.LoadingState) -> Bool {
+            switch (lhs, rhs) {
+            case (.idle, .idle):
+                return true
+            case (.loading, .loading):
+                return true
+            case (.loaded, .loaded):
+                return true
+            case (.failed, .failed):
+                return true
+            default:
+                return false
+            }
+        }
     }
 }
 
