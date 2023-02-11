@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EA2996B87400CA367F /* AppDelegate.swift */; };
 		FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EC2996B87400CA367F /* SceneDelegate.swift */; };
-		FBA262EF2996B87400CA367F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EE2996B87400CA367F /* ViewController.swift */; };
-		FBA262F22996B87400CA367F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA262F02996B87400CA367F /* Main.storyboard */; };
+		FBA262EF2996B87400CA367F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA262EE2996B87400CA367F /* SearchViewController.swift */; };
 		FBA262F42996B87600CA367F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA262F32996B87600CA367F /* Assets.xcassets */; };
-		FBA262F72996B87600CA367F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA262F52996B87600CA367F /* LaunchScreen.storyboard */; };
 		FBA263022996B87600CA367F /* ArgyleTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263012996B87600CA367F /* ArgyleTestTests.swift */; };
 		FBA2630C2996B87600CA367F /* ArgyleTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630B2996B87600CA367F /* ArgyleTestUITests.swift */; };
 		FBA2630E2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2630D2996B87600CA367F /* ArgyleTestUITestsLaunchTests.swift */; };
@@ -24,6 +22,16 @@
 		FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263272996C3EA00CA367F /* HTTPHeader.swift */; };
 		FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2632A299791EE00CA367F /* Dictionary.swift */; };
 		FBA2632D2997926500CA367F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2632C2997926500CA367F /* API.swift */; };
+		FBA26331299792D200CA367F /* SearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26330299792D200CA367F /* SearchEndpoint.swift */; };
+		FBA26333299793BF00CA367F /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26332299793BF00CA367F /* SearchParameters.swift */; };
+		FBA263362997949100CA367F /* SearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263352997949100CA367F /* SearchProvider.swift */; };
+		FBA26339299795FD00CA367F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA26338299795FD00CA367F /* Company.swift */; };
+		FBA2633B299796A600CA367F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2633A299796A600CA367F /* SearchResults.swift */; };
+		FBA2633E2997991F00CA367F /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2633D2997991F00CA367F /* Injected.swift */; };
+		FBA263402997993300CA367F /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2633F2997993300CA367F /* InjectionKey.swift */; };
+		FBA263422997995900CA367F /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263412997995900CA367F /* InjectedValues.swift */; };
+		FBA263442997997600CA367F /* InjectedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263432997997600CA367F /* InjectedKeys.swift */; };
+		FBA2634729979A3100CA367F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2634629979A3100CA367F /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +55,8 @@
 		FBA262E72996B87400CA367F /* ArgyleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArgyleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA262EA2996B87400CA367F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA262EC2996B87400CA367F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBA262EE2996B87400CA367F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FBA262F12996B87400CA367F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FBA262EE2996B87400CA367F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FBA262F32996B87600CA367F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FBA262F62996B87600CA367F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBA262F82996B87600CA367F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA262FD2996B87600CA367F /* ArgyleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgyleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA263012996B87600CA367F /* ArgyleTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgyleTestTests.swift; sourceTree = "<group>"; };
@@ -66,6 +72,16 @@
 		FBA263272996C3EA00CA367F /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		FBA2632A299791EE00CA367F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		FBA2632C2997926500CA367F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FBA26330299792D200CA367F /* SearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpoint.swift; sourceTree = "<group>"; };
+		FBA26332299793BF00CA367F /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
+		FBA263352997949100CA367F /* SearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProvider.swift; sourceTree = "<group>"; };
+		FBA26338299795FD00CA367F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		FBA2633A299796A600CA367F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		FBA2633D2997991F00CA367F /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		FBA2633F2997993300CA367F /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		FBA263412997995900CA367F /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		FBA263432997997600CA367F /* InjectedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedKeys.swift; sourceTree = "<group>"; };
+		FBA2634629979A3100CA367F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +132,15 @@
 		FBA262E92996B87400CA367F /* ArgyleTest */ = {
 			isa = PBXGroup;
 			children = (
+				FBA2633C2997990E00CA367F /* Injection */,
+				FBA26337299795F300CA367F /* Models */,
 				FBA26329299791E600CA367F /* Extensions */,
 				FBA2631E2996C1FF00CA367F /* Networking */,
 				FBA2631B2996BCCA00CA367F /* Utilities */,
 				FBA262EA2996B87400CA367F /* AppDelegate.swift */,
 				FBA262EC2996B87400CA367F /* SceneDelegate.swift */,
-				FBA262EE2996B87400CA367F /* ViewController.swift */,
-				FBA262F02996B87400CA367F /* Main.storyboard */,
+				FBA26345299799D900CA367F /* UI */,
 				FBA262F32996B87600CA367F /* Assets.xcassets */,
-				FBA262F52996B87600CA367F /* LaunchScreen.storyboard */,
 				FBA262F82996B87600CA367F /* Info.plist */,
 				FBA2631A2996BBF800CA367F /* Config.xcconfig */,
 			);
@@ -159,12 +175,9 @@
 		FBA2631E2996C1FF00CA367F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				FBA2631F2996C20F00CA367F /* APISessionProviding.swift */,
-				FBA263212996C24B00CA367F /* APISession.swift */,
-				FBA263232996C29000CA367F /* RequestProviding.swift */,
-				FBA263252996C2C700CA367F /* HTTPMethod.swift */,
-				FBA263272996C3EA00CA367F /* HTTPHeader.swift */,
-				FBA2632C2997926500CA367F /* API.swift */,
+				FBA263342997948600CA367F /* Providers */,
+				FBA2632F299792C400CA367F /* Endpoints */,
+				FBA2632E299792BB00CA367F /* APISession */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -175,6 +188,65 @@
 				FBA2632A299791EE00CA367F /* Dictionary.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBA2632E299792BB00CA367F /* APISession */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2631F2996C20F00CA367F /* APISessionProviding.swift */,
+				FBA263212996C24B00CA367F /* APISession.swift */,
+				FBA263232996C29000CA367F /* RequestProviding.swift */,
+				FBA263252996C2C700CA367F /* HTTPMethod.swift */,
+				FBA263272996C3EA00CA367F /* HTTPHeader.swift */,
+				FBA2632C2997926500CA367F /* API.swift */,
+			);
+			path = APISession;
+			sourceTree = "<group>";
+		};
+		FBA2632F299792C400CA367F /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				FBA26330299792D200CA367F /* SearchEndpoint.swift */,
+				FBA26332299793BF00CA367F /* SearchParameters.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		FBA263342997948600CA367F /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				FBA263352997949100CA367F /* SearchProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		FBA26337299795F300CA367F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBA26338299795FD00CA367F /* Company.swift */,
+				FBA2633A299796A600CA367F /* SearchResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBA2633C2997990E00CA367F /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				FBA2633D2997991F00CA367F /* Injected.swift */,
+				FBA2633F2997993300CA367F /* InjectionKey.swift */,
+				FBA263412997995900CA367F /* InjectedValues.swift */,
+				FBA263432997997600CA367F /* InjectedKeys.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		FBA26345299799D900CA367F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FBA262EE2996B87400CA367F /* SearchViewController.swift */,
+				FBA2634629979A3100CA367F /* SearchViewModel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBA262F72996B87600CA367F /* LaunchScreen.storyboard in Resources */,
 				FBA262F42996B87600CA367F /* Assets.xcassets in Resources */,
-				FBA262F22996B87400CA367F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +380,20 @@
 			files = (
 				FBA2632D2997926500CA367F /* API.swift in Sources */,
 				FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */,
+				FBA26331299792D200CA367F /* SearchEndpoint.swift in Sources */,
+				FBA2633E2997991F00CA367F /* Injected.swift in Sources */,
 				FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */,
 				FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */,
-				FBA262EF2996B87400CA367F /* ViewController.swift in Sources */,
+				FBA263422997995900CA367F /* InjectedValues.swift in Sources */,
+				FBA263442997997600CA367F /* InjectedKeys.swift in Sources */,
+				FBA262EF2996B87400CA367F /* SearchViewController.swift in Sources */,
+				FBA263402997993300CA367F /* InjectionKey.swift in Sources */,
+				FBA2633B299796A600CA367F /* SearchResults.swift in Sources */,
+				FBA263362997949100CA367F /* SearchProvider.swift in Sources */,
+				FBA26333299793BF00CA367F /* SearchParameters.swift in Sources */,
+				FBA26339299795FD00CA367F /* Company.swift in Sources */,
 				FBA262EB2996B87400CA367F /* AppDelegate.swift in Sources */,
+				FBA2634729979A3100CA367F /* SearchViewModel.swift in Sources */,
 				FBA262ED2996B87400CA367F /* SceneDelegate.swift in Sources */,
 				FBA263262996C2C700CA367F /* HTTPMethod.swift in Sources */,
 				FBA2631D2996BCD700CA367F /* BuildConfiguration.swift in Sources */,
@@ -353,25 +433,6 @@
 			targetProxy = FBA263082996B87600CA367F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FBA262F02996B87400CA367F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBA262F12996B87400CA367F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FBA262F52996B87600CA367F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBA262F62996B87600CA367F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FBA2630F2996B87600CA367F /* Debug */ = {
@@ -502,7 +563,7 @@
 				INFOPLIST_FILE = ArgyleTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,7 +591,7 @@
 				INFOPLIST_FILE = ArgyleTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

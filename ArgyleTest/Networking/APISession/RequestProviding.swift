@@ -41,6 +41,7 @@ extension RequestProviding {
         guard let url = components.url else {
             preconditionFailure("Can't create URL")
         }
+        
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
         request.httpMethod = method.rawValue
 
