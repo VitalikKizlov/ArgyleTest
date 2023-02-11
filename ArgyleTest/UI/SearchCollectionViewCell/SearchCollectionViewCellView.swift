@@ -8,5 +8,8 @@
 import UIKit
 
 final class SearchCollectionViewCellView: UIView {
-    
+
+    func setup(_ viewModel: SearchItemViewModel) {
+            
+    }
 }

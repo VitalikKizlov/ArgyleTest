@@ -21,7 +21,7 @@ class SearchCollectionView: UICollectionView {
 
     private func setup() {
         collectionViewLayout = generateLayout()
-        register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: TranscriptDetailCollectionViewCell.reuseIdentifier)
+        register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.reuseIdentifier)
     }
 
     private func generateLayout() -> UICollectionViewCompositionalLayout {
@@ -30,7 +30,7 @@ class SearchCollectionView: UICollectionView {
 
             let size = NSCollectionLayoutSize(
                 widthDimension: NSCollectionLayoutDimension.fractionalWidth(1),
-                heightDimension: NSCollectionLayoutDimension.estimated(400)
+                heightDimension: NSCollectionLayoutDimension.estimated(100)
             )
             let item = NSCollectionLayoutItem(layoutSize: size)
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: 1)

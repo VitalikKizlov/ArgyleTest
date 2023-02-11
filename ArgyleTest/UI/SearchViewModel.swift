@@ -23,6 +23,12 @@ final class SearchViewModel {
     @Published private(set) var state: LoadingState = .idle
     private var subscriptions: Set<AnyCancellable> = []
 
+    // MARK: - Lifecycle
+
+    init() {
+        setupBindings()
+    }
+
     // MARK: - Private
 
     private func setupBindings() {
@@ -48,7 +54,14 @@ final class SearchViewModel {
                     self.state = .idle
                 }
             } receiveValue: { [weak self] results in
-                print("Count ---", results.companies.count)
+                let viewModels = results.companies.map { company in
+                    return SearchItemViewModel(
+                        title: company.name,
+                        subtitle: company.kind.rawValue,
+                        imageUrl: company.logoURL
+                    )
+                }
+                self?.state = .loaded(viewModels)
             }
             .store(in: &subscriptions)
     }
@@ -58,7 +71,7 @@ extension SearchViewModel {
     enum LoadingState {
         case idle
         case loading
-        case loaded
+        case loaded([SearchItemViewModel])
         case failed(Error)
     }
 }

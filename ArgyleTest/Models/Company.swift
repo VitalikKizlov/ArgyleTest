@@ -10,12 +10,16 @@ import Foundation
 struct Company: Codable {
     let name: String
     let kind: Kind
-    let logoURL: String
+    let logoStringURL: String
+
+    var logoURL: URL? {
+        URL(string: logoStringURL)
+    }
 
     enum CodingKeys: String, CodingKey {
         case name
         case kind
-        case logoURL = "logo_url"
+        case logoStringURL = "logo_url"
     }
 }
 

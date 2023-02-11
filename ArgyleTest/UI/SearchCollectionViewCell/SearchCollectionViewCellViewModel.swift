@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct SearchCollectionViewCellViewModel {
+struct SearchItemViewModel {
     let title: String
     let subtitle: String
     let imageUrl: URL?
 }
 
-extension SearchCollectionViewCellViewModel: Hashable {
+extension SearchItemViewModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(subtitle)
         hasher.combine(imageUrl)
     }
 
-    static func == (lhs: SearchCollectionViewCellViewModel, rhs: SearchCollectionViewCellViewModel) -> Bool {
+    static func == (lhs: SearchItemViewModel, rhs: SearchItemViewModel) -> Bool {
         lhs.title == rhs.title && lhs.subtitle == rhs.subtitle && lhs.imageUrl == rhs.imageUrl
     }
 }

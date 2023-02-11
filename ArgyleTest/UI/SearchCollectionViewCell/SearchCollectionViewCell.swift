@@ -9,6 +9,8 @@ import UIKit
 
 final class SearchCollectionViewCell: UICollectionViewCell {
 
+    static let reuseIdentifier = String(describing: SearchCollectionViewCell.self)
+
     @AutoLayoutable private var searchCollectionViewCellView =
     SearchCollectionViewCellView()
 
@@ -26,12 +28,8 @@ final class SearchCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Setup
 
-    public func setup(with viewModel: TranscriptDetailCellViewModel) {
-        transcriptCollectionViewCellView.setup(with: viewModel)
-    }
-
-    public func updateHighlight(for time: Double) {
-        transcriptCollectionViewCellView.updateHighlight(for: time)
+    func setup(_ viewModel: SearchItemViewModel) {
+        searchCollectionViewCellView.setup(viewModel)
     }
 
     // MARK: - Setup ContentView
