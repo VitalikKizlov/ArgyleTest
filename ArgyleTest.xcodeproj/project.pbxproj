@@ -46,6 +46,9 @@
 		FBA2636729983C9700CA367F /* MockSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636429983BBD00CA367F /* MockSearchProvider.swift */; };
 		FBA2636929983DF300CA367F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636829983DF300CA367F /* ProcessInfo.swift */; };
 		FBA2636B2998461A00CA367F /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */; };
+		FBA2636D2998EC6B00CA367F /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636C2998EC6B00CA367F /* EndpointTests.swift */; };
+		FBA2636F2998F47800CA367F /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2636E2998F47800CA367F /* URL.swift */; };
+		FBA263712998F57F00CA367F /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA263702998F57F00CA367F /* MockEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		FBA2636429983BBD00CA367F /* MockSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchProvider.swift; sourceTree = "<group>"; };
 		FBA2636829983DF300CA367F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		FBA2636C2998EC6B00CA367F /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		FBA2636E2998F47800CA367F /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		FBA263702998F57F00CA367F /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 				FBA2635B2998351C00CA367F /* SearchViewControllerTests.swift */,
 				FBA263622998398200CA367F /* SearchProviderTests.swift */,
 				FBA2636A2998461A00CA367F /* SearchViewModelTests.swift */,
+				FBA2636C2998EC6B00CA367F /* EndpointTests.swift */,
 			);
 			path = ArgyleTestTests;
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 				FBA2632A299791EE00CA367F /* Dictionary.swift */,
 				FBA2634F2997A48F00CA367F /* UIView.swift */,
 				FBA2636829983DF300CA367F /* ProcessInfo.swift */,
+				FBA2636E2998F47800CA367F /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA2636429983BBD00CA367F /* MockSearchProvider.swift */,
+				FBA263702998F57F00CA367F /* MockEndpoint.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -452,11 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA263712998F57F00CA367F /* MockEndpoint.swift in Sources */,
 				FBA2632D2997926500CA367F /* API.swift in Sources */,
 				FBA263522997A4F500CA367F /* SearchCollectionViewCellView.swift in Sources */,
 				FBA263282996C3EA00CA367F /* HTTPHeader.swift in Sources */,
 				FBA26331299792D200CA367F /* SearchEndpoint.swift in Sources */,
 				FBA2633E2997991F00CA367F /* Injected.swift in Sources */,
+				FBA2636F2998F47800CA367F /* URL.swift in Sources */,
 				FBA2632B299791EE00CA367F /* Dictionary.swift in Sources */,
 				FBA263202996C20F00CA367F /* APISessionProviding.swift in Sources */,
 				FBA263422997995900CA367F /* InjectedValues.swift in Sources */,
@@ -490,6 +501,7 @@
 			files = (
 				FBA2635C2998351C00CA367F /* SearchViewControllerTests.swift in Sources */,
 				FBA263632998398200CA367F /* SearchProviderTests.swift in Sources */,
+				FBA2636D2998EC6B00CA367F /* EndpointTests.swift in Sources */,
 				FBA2636B2998461A00CA367F /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
