@@ -28,6 +28,11 @@ class SearchViewController: UIViewController {
     }()
 
     @AutoLayoutable private var collectionView = SearchCollectionView()
+    @AutoLayoutable private var spinnerView: UIActivityIndicatorView = {
+        let spinnerView = UIActivityIndicatorView(style: .medium)
+        spinnerView.hidesWhenStopped = true
+        return spinnerView
+    }()
 
     typealias DataSource = UICollectionViewDiffableDataSource<Section, SearchItemViewModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, SearchItemViewModel>
@@ -67,13 +72,17 @@ class SearchViewController: UIViewController {
                 case .idle:
                     break
                 case .failed(let error):
-                    print("show alert")
+                    self.showAlertInfo(title: "Something went wrong", message: error.localizedDescription)
+                    self.hideSpinner()
                 case .loading:
-                    print("show spinner")
-                case .loaded(let viewModels):
-                    if viewModels.isEmpty {
-                        print("emptyyyy")
+                    self.showSpinner()
+                case .loaded(let viewModels, let showNoResultsMessage):
+                    self.hideSpinner()
+
+                    if showNoResultsMessage {
+                        self.showAlertInfo(title: "No results", message: "Try entering another words")
                     }
+
                     self.updateSections(viewModels)
                 }
             }
@@ -109,6 +118,7 @@ class SearchViewController: UIViewController {
     private func configureUI() {
         configureSearchBar()
         configureCollectionView()
+        configureSpinnerView()
     }
 
     private func configureSearchBar() {
@@ -130,6 +140,15 @@ class SearchViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+
+    private func configureSpinnerView() {
+        view.addSubview(spinnerView)
+
+        NSLayoutConstraint.activate([
+            spinnerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            spinnerView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 
@@ -158,6 +177,14 @@ class SearchViewController: UIViewController {
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = nil
         searchBar.resignFirstResponder()
+    }
+
+    private func showSpinner() {
+        spinnerView.startAnimating()
+    }
+
+    private func hideSpinner() {
+        spinnerView.stopAnimating()
     }
 }
 

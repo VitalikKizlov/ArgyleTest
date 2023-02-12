@@ -38,10 +38,6 @@ final class SearchViewModel {
             .debounce(for: 0.2, scheduler: DispatchQueue.main)
             .removeDuplicates()
             .filter { value in
-                if value.isEmpty {
-                    self.state = .loaded([])
-                }
-
                 return value.count > 1
             }
             .sink { [weak self] _ in
@@ -62,8 +58,12 @@ final class SearchViewModel {
         switch event {
         case .textDidChange(let text):
             searchText = text
+
+            if searchText.isEmpty {
+                self.state = .loaded([], false)
+            }
         case .cancelButtonClicked:
-            state = .loaded([])
+            state = .loaded([], false)
         }
     }
 
@@ -87,7 +87,7 @@ final class SearchViewModel {
                         imageUrl: company.logoURL
                     )
                 }
-                self?.state = .loaded(viewModels)
+                self?.state = .loaded(viewModels, viewModels.isEmpty)
             }
             .store(in: &subscriptions)
     }
@@ -97,7 +97,7 @@ extension SearchViewModel {
     enum LoadingState: Equatable {
         case idle
         case loading
-        case loaded([SearchItemViewModel])
+        case loaded([SearchItemViewModel], Bool)
         case failed(Error)
 
         static func == (lhs: SearchViewModel.LoadingState, rhs: SearchViewModel.LoadingState) -> Bool {
