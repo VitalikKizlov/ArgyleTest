@@ -10,5 +10,9 @@ In production, when we have more complex logic like pagination etc., I would rat
 CombineCocoa - publishers for common UIKit controls.
 Kingfisher - for downloading and caching images.
 
+## Known issues
+
+New kind case that is not defined in enum causing decoding error.
+
 
 
