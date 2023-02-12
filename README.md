@@ -7,8 +7,8 @@ In production, when we have more complex logic like pagination etc., I would rat
 
 ## Dependencies
 
-CombineCocoa - publishers for common UIKit controls
-Kingfisher - for downloading and caching images
+CombineCocoa - publishers for common UIKit controls.
+Kingfisher - for downloading and caching images.
 
 
 
