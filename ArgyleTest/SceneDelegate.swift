@@ -22,8 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let viewModel = SearchViewModel()
         let searchViewController = SearchViewController(viewModel)
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        navigationController.navigationBar.backgroundColor = .white
+        navigationController.navigationBar.prefersLargeTitles = true
 
-        self.window?.rootViewController = searchViewController
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
 
