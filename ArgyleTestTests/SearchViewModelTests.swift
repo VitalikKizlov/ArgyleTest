@@ -26,12 +26,12 @@ class SearchViewModelTests: XCTestCase {
         sut = SearchViewModel()
         
         sut.viewInputEventSubject.send(.cancelButtonClicked)
-        XCTAssertEqual(sut.state, SearchViewModel.LoadingState.loaded([]))
+        XCTAssertEqual(sut.state, SearchViewModel.LoadingState.loaded([], false))
 
         sut.viewInputEventSubject.send(.textDidChange("ama"))
         XCTAssertEqual(sut.searchText, "ama")
 
         sut.viewInputEventSubject.send(.textDidChange(""))
-        XCTAssertEqual(sut.state, SearchViewModel.LoadingState.loaded([]))
+        XCTAssertEqual(sut.state, SearchViewModel.LoadingState.loaded([], false))
     }
 }
